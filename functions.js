@@ -43,7 +43,7 @@ const func2=(d)=>{
 }
 func2(func1('Diego desde func1'))
 
-
+// CALLBACK FUNCIONES 2
 const func3=(dato)=>dato
 const func4=(d)=>console.log(d);
 func4(func3('Diego desde func3'))
