@@ -1,13 +1,29 @@
-import React,{} from 'react'
+import React, { useState } from 'react'
 
 const Formulario = () => {
+    const [nombre, setNombre] = useState('')
+    const [edad, setEdad] = useState('')
+
     return (
-        
+
         <div className='col-6'>
             <form className='form-group'>
-                <input placeholder='Introduce el nombre' className='form-control mb-3' type="text"/>
-                <input placeholder='Introduce el la edad' className='form-control mb-3' type="number"/>
-                <input  className='btn btn-info btn-block mb-3' type="submit"/>
+                <input
+                    placeholder='Introduce el nombre'
+                    className='form-control mb-3'
+                    type="text"
+                    onChange={(e)=>{setNombre(e.target.value)}}
+                />
+                <input
+                    placeholder='Introduce el la edad'
+                    className='form-control mb-3'
+                    type="text"
+                    onChange={(e)=>{setEdad(e.target.value)}}
+                />
+                <input
+                    className='btn btn-info btn-block mb-3'
+                    type="submit"
+                />
             </form>
         </div>
     )
