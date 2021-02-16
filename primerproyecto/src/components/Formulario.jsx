@@ -4,10 +4,23 @@ const Formulario = () => {
     const [nombre, setNombre] = useState('')
     const [edad, setEdad] = useState('')
 
+    const Validar=(event)=>{
+        event.preventDefault()
+        if (!nombre.trim()||!edad.trim() ) {
+            console.log('No deben haber campos vacios');
+            return
+            
+        }
+        else{
+            console.log('Eh pulsado el boton');
+
+        }
+    }
+
     return (
 
-        <div className='col-6'>
-            <form className='form-group'>
+        <div>
+            <form onSubmit={Validar} className='form-group'>
                 <input
                     placeholder='Introduce el nombre'
                     className='form-control mb-3'
