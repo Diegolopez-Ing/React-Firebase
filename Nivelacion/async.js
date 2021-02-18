@@ -24,3 +24,25 @@ const obtenerUsuario= async()=>{
     }
 }
 obtenerUsuario()
+
+function findLargest(ts) {
+    try {
+        let menor=10000
+    if (ts.length<=0) {
+        menor=0
+    }
+    else{
+        for (let index = 0; index < ts.length; index++) {
+                if (0<=ts[index] && ts[index]<=menor) {
+                    menor=ts[index]
+                }
+            
+        }
+        return menor
+    }
+    } catch (error) {
+        console.error(error.name)
+    }
+    
+}
+findLargest([1,45,-5,3])
