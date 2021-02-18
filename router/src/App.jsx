@@ -19,7 +19,8 @@ function App() {
         <Route exact path='/'>
             <Base></Base>
         </Route>
-        <Route path="/inicio">
+        {/* Ruta + Parametro con : */}
+        <Route path="/inicio/:nombre/:edad">
           <Inicio></Inicio>
         </Route>
       </Switch>
