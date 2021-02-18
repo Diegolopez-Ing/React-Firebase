@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState,useEffect } from "react"
 
-export const Base = () => {
+
+const Base = () => {
+
+    const [nombre, setNombre] = useState('Diego')
+
+    useEffect(() => {//Le da un timepo de espera a la renderizacion de la página y luego hará lo de adentro 
+        setTimeout(()=>{
+            setNombre('Lopez')
+        },2000)
+        
+    })
+
     return (
         <div>
             <h1>Pagina de Base</h1>
+            {nombre}
         </div>
     )
 }
