@@ -6,17 +6,21 @@ import {//Esto lo hacemos para no traer todas lass utilidades del paquete Router
   Route,
   Link
 } from 'react-router-dom'
+import Base from './components/Base'
+import Inicio  from './components/Inicio'
 
 function App() {
   return (
     <Router>
+      <Link to='/inicio'>Inicio</Link>
+      <Link to='/'>Base</Link>
       {/* Es donde decimos que para esta ruta cargue el contenido */}
       <Switch>
-        <Route path="/inicio">
-          Estas en Inicio
+        <Route exact path='/'>
+            <Base></Base>
         </Route>
-        <Route path='/'>
-            Esta es la url BASE
+        <Route path="/inicio">
+          <Inicio></Inicio>
         </Route>
       </Switch>
     </Router>
